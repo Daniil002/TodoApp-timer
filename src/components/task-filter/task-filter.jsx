@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types';
 import './task-filter.css';
 
 const TasksFilter = ({ filter, onFilterChange }) => {
@@ -22,12 +22,10 @@ const TasksFilter = ({ filter, onFilterChange }) => {
   );
 };
 
-
 TasksFilter.defaultProps = {
   filter: 'All',
   onFilterChange: () => {},
 };
-
 
 TasksFilter.propTypes = {
   filter: PropTypes.string,

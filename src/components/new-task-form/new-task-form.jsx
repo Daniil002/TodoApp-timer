@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types';
 import './new-task-form.css';
 
 const NewTaskForm = ({ onTaskAdded }) => {
@@ -7,8 +7,8 @@ const NewTaskForm = ({ onTaskAdded }) => {
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' && description.trim()) {
-      onTaskAdded(description.trim()); 
-      setDescription(''); 
+      onTaskAdded(description.trim());
+      setDescription('');
     }
   };
 
@@ -26,11 +26,9 @@ const NewTaskForm = ({ onTaskAdded }) => {
   );
 };
 
-
 NewTaskForm.defaultProps = {
   onTaskAdded: () => {},
 };
-
 
 NewTaskForm.propTypes = {
   onTaskAdded: PropTypes.func,

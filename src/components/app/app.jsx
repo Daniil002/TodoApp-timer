@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { formatDistanceToNow } from 'date-fns'; 
+import { formatDistanceToNow } from 'date-fns';
 import NewTaskForm from '../new-task-form/new-task-form';
 import TaskList from '../task-list/task-list';
 import Footer from '../footer/footer';
@@ -32,7 +32,6 @@ class App extends Component {
     };
   }
 
- 
   addTask = (description) => {
     const newTask = {
       id: Date.now(),
@@ -44,7 +43,6 @@ class App extends Component {
       tasks: [...tasks, newTask],
     }));
   };
-
 
   filterTasks = () => {
     const { tasks, filter } = this.state;
@@ -58,10 +56,9 @@ class App extends Component {
       .filter((task) => {
         if (filter === 'Active') return !task.completed;
         if (filter === 'Completed') return task.completed;
-        return true; 
+        return true;
       });
   };
-
 
   deleteItem = (id) => {
     this.setState(({ tasks }) => ({
@@ -88,7 +85,6 @@ class App extends Component {
   };
 
   render() {
-
     const { tasks, filter } = this.state;
 
     const filteredTasks = this.filterTasks();

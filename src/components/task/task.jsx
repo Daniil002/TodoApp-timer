@@ -9,7 +9,7 @@ const Task = ({
   onDeleted,
   onToggleCompleted,
 }) => {
-  const inputId = `task-${description.replace(/\s+/g, '-').toLowerCase()}`; 
+  const inputId = `task-${description.replace(/\s+/g, '-').toLowerCase()}`;
 
   return (
     <li className={completed ? 'completed' : ''}>

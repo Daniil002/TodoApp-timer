@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types';
 import Task from '../task/task';
 import './task-list.css';
 
@@ -19,13 +19,11 @@ const TaskList = ({ tasks, onDeleted, onToggleCompleted }) => (
   </ul>
 );
 
-
 TaskList.defaultProps = {
   tasks: [],
   onDeleted: () => {},
   onToggleCompleted: () => {},
 };
-
 
 TaskList.propTypes = {
   tasks: PropTypes.arrayOf(
