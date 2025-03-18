@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import Task from '../task/task';
 import './task-list.css';
 
-const TaskList = ({ tasks, onDeleted, onToggleCompleted }) => (
+const TaskList = ({
+  tasks,
+  onDeleted,
+  onToggleCompleted,
+  onStartTimer,
+  onStopTimer,
+}) => (
   <ul className="todo-list">
     {tasks.map((task) => (
       <Task
@@ -12,18 +18,16 @@ const TaskList = ({ tasks, onDeleted, onToggleCompleted }) => (
         description={task.description}
         created={task.created}
         completed={task.completed}
+        time={task.time}
+        isRunning={task.isRunning}
         onDeleted={() => onDeleted(task.id)}
         onToggleCompleted={() => onToggleCompleted(task.id)}
+        onStartTimer={() => onStartTimer(task.id)}
+        onStopTimer={() => onStopTimer(task.id)}
       />
     ))}
   </ul>
 );
-
-TaskList.defaultProps = {
-  tasks: [],
-  onDeleted: () => {},
-  onToggleCompleted: () => {},
-};
 
 TaskList.propTypes = {
   tasks: PropTypes.arrayOf(
@@ -32,10 +36,14 @@ TaskList.propTypes = {
       description: PropTypes.string,
       created: PropTypes.string,
       completed: PropTypes.bool,
+      time: PropTypes.number,
+      isRunning: PropTypes.bool,
     })
-  ),
-  onDeleted: PropTypes.func,
-  onToggleCompleted: PropTypes.func,
+  ).isRequired,
+  onDeleted: PropTypes.func.isRequired,
+  onToggleCompleted: PropTypes.func.isRequired,
+  onStartTimer: PropTypes.func.isRequired,
+  onStopTimer: PropTypes.func.isRequired,
 };
 
 export default TaskList;
