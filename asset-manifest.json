@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Daniil002/TodoApp-timer/static/css/main.9217480e.css",
+    "main.js": "/Daniil002/TodoApp-timer/static/js/main.5bd16159.js",
+    "index.html": "/Daniil002/TodoApp-timer/index.html",
+    "main.9217480e.css.map": "/Daniil002/TodoApp-timer/static/css/main.9217480e.css.map",
+    "main.5bd16159.js.map": "/Daniil002/TodoApp-timer/static/js/main.5bd16159.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9217480e.css",
+    "static/js/main.5bd16159.js"
+  ]
+}
